@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="2dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="14dp">
 
         <TextView android:id="@+id/low_tick"
                   android:layout_width="match_parent"
@@ -64,4 +64,5 @@
                   android:ellipsize="marquee" />
 
     </LinearLayout>
+
 </LinearLayout>

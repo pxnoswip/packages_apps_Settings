@@ -71,6 +71,9 @@
     <!-- Notch: Full screen apps -->
     <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
     <string name="display_cutout_force_fullscreen_summary">Force apps to ignore notch space</string>
+    
+    <!-- Hide gesture navigation bar -->
+    <string name="hide_gesture_navigation_bar_title">Hide gesture navigation bar</string>
 
     <!-- Notch behavior -->
     <string name="display_cutout_mode_title">Notch behavior</string>
