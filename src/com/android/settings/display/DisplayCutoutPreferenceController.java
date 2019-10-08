@@ -26,7 +26,7 @@ import android.os.SystemClock;
 
 import com.android.settings.core.BasePreferenceController;
 
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import java.util.Objects;
 
 public class DisplayCutoutPreferenceController extends BasePreferenceController
