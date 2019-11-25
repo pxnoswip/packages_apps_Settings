@@ -3290,7 +3290,7 @@
         </activity>
 
         <!-- NitrogenSettings -->
-        <activity android:name=".Settings$NitrogenSettingsActivity"
+   <!--     <activity android:name=".Settings$NitrogenSettingsActivity"
             android:label="@string/nitrogen_settings_title"
             android:icon="@drawable/ic_settings_nitrogen"
             android:taskAffinity="">
@@ -3315,7 +3315,7 @@
                 android:value="true" />
             <meta-data android:name="com.android.settings.summary"
                 android:resource="@string/nitrogen_settings_summary"/>
-        </activity>
+        </activity> -->
 
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
