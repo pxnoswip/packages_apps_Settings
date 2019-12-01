@@ -48,10 +48,6 @@
     <string name="back_options_dialog_title">Options</string>
     <string name="back_height_message">Amount of screen height used as touchable region for back gesture.</string>
 
-    <!-- Wake to ambient/lockscreen gesture -->
-    <string name="ambient_wake_gestures_title">Ambient wake gestures</string>
-    <string name="ambient_wake_gestures_summary">Show Ambient Display instead of normal losckreen on wake gestures</string>
-
     <!-- Ambient music ticker pulse -->
     <string name="pulse_on_new_tracks_title">Ambient music ticker</string>
     <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
