@@ -87,6 +87,9 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
             }
         });
         Switch mNavBarGesturalHideNav = view.findViewById(R.id.nav_bar_gestural_hide_nav_switch);
+
+        Switch mEdgeHaptic = view.findViewById(R.id.back_gesture_haptic);
+
         boolean mIsGesturalNavBarHidden = NavBarUtils.isGesturalNavBarHidden(getContext(), USER_CURRENT);
         if (SystemNavigationPreferenceController.isEdgeToEdgeEnabled(getContext())) {
             OverlayInfo ovInfo = null;
@@ -96,6 +99,7 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
             mIsGesturalNavBarHidden = mIsGesturalNavBarHidden && ovInfo != null && (ovInfo.state == OverlayInfo.STATE_ENABLED);
         }
         mNavBarGesturalHideNav.setChecked(NavBarUtils.isGesturalNavBarHidden(getContext(), USER_CURRENT));
+        mEdgeHaptic.setChecked(NavBarUtils.isBackHapticEnabled(getContext(), USER_CURRENT));
         return new AlertDialog.Builder(getContext())
                 .setTitle(R.string.back_options_dialog_title)
                 .setMessage(R.string.back_sensitivity_dialog_message)
@@ -105,6 +109,11 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
                     getArguments().putInt(KEY_BACK_SENSITIVITY, sensitivity);
                     int height = seekBarHeight.getProgress();
                     getArguments().putInt(KEY_BACK_HEIGHT, height);
+
+                    final boolean isBackHaptic = mEdgeHaptic.isChecked();
+                    Settings.System.putIntForUser(getContext().getContentResolver(),
+                        Settings.System.BACK_GESTURE_HAPTIC, isBackHaptic ? 1 : 0, USER_CURRENT);
+
                     SystemNavigationGestureSettings.setBackHeight(getActivity(), height);
                     SystemNavigationGestureSettings.setBackSensitivity(getActivity(),
  				overlayManager, sensitivity);

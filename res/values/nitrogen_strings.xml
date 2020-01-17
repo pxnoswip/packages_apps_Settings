@@ -60,4 +60,5 @@
     <string name="volume_skiptrack_title">Volume rocker skip tracks</string>
     <string name="volume_skiptrack_summary">Long press the volume rocker to skip tracks when playing music, even remotely on tv or PC with e.g. Spotify (app must run on the phone and show the notification).</string>
 
+    <string name="back_gesture_haptic">Enable haptic tick effect on back gesture</string>
 </resources>
